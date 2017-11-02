@@ -5,7 +5,7 @@ var currentPlayer;
 function Player (name, mark, space) {
   this.name = name;
   this.mark = mark;
-  this.space = "";
+  this.space = [];
 }
 
 var playerSwitch = function() {
@@ -17,14 +17,28 @@ var playerSwitch = function() {
 }
 
 var winnerCheck = function() {
-  if (currentPlayer.space === "123" ||
-      currentPlayer.space === "456" ||
-      currentPlayer.space === "789" ||
-      currentPlayer.space === "147" ||
-      currentPlayer.space === "258" ||
-      currentPlayer.space === "369" ||
-      currentPlayer.space === "159" ||
-      currentPlayer.space === "758") {
+  if ((currentPlayer.space.includes(1)) && (currentPlayer.space.includes(2)) && (currentPlayer.space.includes(3))) {
+    alert("we have a winner");
+  }
+  if ((currentPlayer.space.includes(4)) && (currentPlayer.space.includes(5)) && (currentPlayer.space.includes(6))) {
+    alert("we have a winner");
+  }
+  if ((currentPlayer.space.includes(7)) && (currentPlayer.space.includes(8)) && (currentPlayer.space.includes(9))) {
+    alert("we have a winner");
+  }
+  if ((currentPlayer.space.includes(1)) && (currentPlayer.space.includes(4)) && (currentPlayer.space.includes(7))) {
+    alert("we have a winner");
+  }
+  if ((currentPlayer.space.includes(2)) && (currentPlayer.space.includes(5)) && (currentPlayer.space.includes(8))) {
+    alert("we have a winner");
+  }
+  if ((currentPlayer.space.includes(3)) && (currentPlayer.space.includes(6)) && (currentPlayer.space.includes(9))) {
+    alert("we have a winner");
+  }
+  if ((currentPlayer.space.includes(1)) && (currentPlayer.space.includes(5)) && (currentPlayer.space.includes(9))) {
+    alert("we have a winner");
+  }
+  if ((currentPlayer.space.includes(3)) && (currentPlayer.space.includes(5)) && (currentPlayer.space.includes(7))) {
     alert("we have a winner");
   }
 }
@@ -50,7 +64,7 @@ $(document).ready(function() {
 
   $(".row1 .column1").click(function() {
     $(".row1 .column1").text(currentPlayer.mark);
-    currentPlayer.space = currentPlayer.space.concat(1);
+    currentPlayer.space.push(1);
     winnerCheck();
     playerSwitch();
     $("#currentPlayer").text(currentPlayer.name);
@@ -58,7 +72,7 @@ $(document).ready(function() {
 
   $(".row1 .column2").click(function() {
     $(".row1 .column2").text(currentPlayer.mark);
-    currentPlayer.space = currentPlayer.space.concat(2);
+    currentPlayer.space.push(2);
     winnerCheck();
     playerSwitch();
     $("#currentPlayer").text(currentPlayer.name);
@@ -66,7 +80,7 @@ $(document).ready(function() {
 
   $(".row1 .column3").click(function() {
     $(".row1 .column3").text(currentPlayer.mark);
-    currentPlayer.space = currentPlayer.space.concat(3);
+    currentPlayer.space.push(3);
     winnerCheck();
     playerSwitch();
     $("#currentPlayer").text(currentPlayer.name);
@@ -74,7 +88,7 @@ $(document).ready(function() {
 
   $(".row2 .column1").click(function() {
     $(".row2 .column1").text(currentPlayer.mark);
-    currentPlayer.space = currentPlayer.space.concat(4);
+    currentPlayer.space.push(4);
     winnerCheck();
     playerSwitch();
     $("#currentPlayer").text(currentPlayer.name);
@@ -82,7 +96,7 @@ $(document).ready(function() {
 
   $(".row2 .column2").click(function() {
     $(".row2 .column2").text(currentPlayer.mark);
-    currentPlayer.space = currentPlayer.space.concat(5);
+    currentPlayer.space.push(5);
     winnerCheck();
     playerSwitch();
     $("#currentPlayer").text(currentPlayer.name);
@@ -90,7 +104,7 @@ $(document).ready(function() {
 
   $(".row2 .column3").click(function() {
     $(".row2 .column3").text(currentPlayer.mark);
-    currentPlayer.space = currentPlayer.space.concat(6);
+    currentPlayer.space.push(6);
     winnerCheck();
     playerSwitch();
     $("#currentPlayer").text(currentPlayer.name);
@@ -98,7 +112,7 @@ $(document).ready(function() {
 
   $(".row3 .column1").click(function() {
     $(".row3 .column1").text(currentPlayer.mark);
-    currentPlayer.space = currentPlayer.space.concat(7);
+    currentPlayer.space.push(7);
     winnerCheck();
     playerSwitch();
     $("#currentPlayer").text(currentPlayer.name);
@@ -106,7 +120,7 @@ $(document).ready(function() {
 
   $(".row3 .column2").click(function() {
     $(".row3 .column2").text(currentPlayer.mark);
-    currentPlayer.space = currentPlayer.space.concat(8);
+    currentPlayer.space.push(8);
     winnerCheck();
     playerSwitch();
     $("#currentPlayer").text(currentPlayer.name);
@@ -114,7 +128,7 @@ $(document).ready(function() {
 
   $(".row3 .column3").click(function() {
     $(".row3 .column3").text(currentPlayer.mark);
-    currentPlayer.space = currentPlayer.space.concat(9);
+    currentPlayer.space.push(9);
     winnerCheck();
     playerSwitch();
     $("#currentPlayer").text(currentPlayer.name);

@@ -16,30 +16,16 @@ var playerSwitch = function() {
   }
 }
 
+
+
 var winnerCheck = function() {
-  if ((currentPlayer.space.includes(1)) && (currentPlayer.space.includes(2)) && (currentPlayer.space.includes(3))) {
-    alert("we have a winner");
-  }
-  if ((currentPlayer.space.includes(4)) && (currentPlayer.space.includes(5)) && (currentPlayer.space.includes(6))) {
-    alert("we have a winner");
-  }
-  if ((currentPlayer.space.includes(7)) && (currentPlayer.space.includes(8)) && (currentPlayer.space.includes(9))) {
-    alert("we have a winner");
-  }
-  if ((currentPlayer.space.includes(1)) && (currentPlayer.space.includes(4)) && (currentPlayer.space.includes(7))) {
-    alert("we have a winner");
-  }
-  if ((currentPlayer.space.includes(2)) && (currentPlayer.space.includes(5)) && (currentPlayer.space.includes(8))) {
-    alert("we have a winner");
-  }
-  if ((currentPlayer.space.includes(3)) && (currentPlayer.space.includes(6)) && (currentPlayer.space.includes(9))) {
-    alert("we have a winner");
-  }
-  if ((currentPlayer.space.includes(1)) && (currentPlayer.space.includes(5)) && (currentPlayer.space.includes(9))) {
-    alert("we have a winner");
-  }
-  if ((currentPlayer.space.includes(3)) && (currentPlayer.space.includes(5)) && (currentPlayer.space.includes(7))) {
-    alert("we have a winner");
+  var winningCombinations = ["1,2,3","4,5,6","7,8,9","1,4,7","2,5,8","3,6,9","1,5,9","3,5,7"]
+  var numbers = currentPlayer.space.sort();
+  var numbersInString = numbers.toString();
+  for (index=0;index<winningCombinations.length;index++) {
+    if (numbersInString.includes(winningCombinations[index])) {
+      alert("we have a winner");
+    }
   }
 }
 

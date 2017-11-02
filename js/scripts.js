@@ -49,75 +49,111 @@ $(document).ready(function() {
   })
 
   $(".row1 .column1").click(function() {
-    $(".row1 .column1").text(currentPlayer.mark);
-    currentPlayer.space.push(1);
-    winnerCheck();
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if (!$(".row1 .column1 p").length) {
+      $(".row1 .column1").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.space.push(1);
+      winnerCheck();
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row1 .column2").click(function() {
-    $(".row1 .column2").text(currentPlayer.mark);
-    currentPlayer.space.push(2);
-    winnerCheck();
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if (!$(".row1 .column2 p").length) {
+      $(".row1 .column2").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.space.push(2);
+      winnerCheck();
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row1 .column3").click(function() {
-    $(".row1 .column3").text(currentPlayer.mark);
-    currentPlayer.space.push(3);
-    winnerCheck();
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if (!$(".row1 .column3 p").length) {
+      $(".row1 .column3").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.space.push(3);
+      winnerCheck();
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row2 .column1").click(function() {
-    $(".row2 .column1").text(currentPlayer.mark);
-    currentPlayer.space.push(4);
-    winnerCheck();
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if (!$(".row2 .column1 p").length) {
+      $(".row2 .column1").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.space.push(4);
+      winnerCheck();
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row2 .column2").click(function() {
-    $(".row2 .column2").text(currentPlayer.mark);
-    currentPlayer.space.push(5);
-    winnerCheck();
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if (!$(".row2 .column2 p").length) {
+      $(".row2 .column2").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.space.push(5);
+      winnerCheck();
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row2 .column3").click(function() {
-    $(".row2 .column3").text(currentPlayer.mark);
-    currentPlayer.space.push(6);
-    winnerCheck();
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if (!$(".row2 .column3 p").length) {
+      $(".row2 .column3").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.space.push(6);
+      winnerCheck();
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row3 .column1").click(function() {
-    $(".row3 .column1").text(currentPlayer.mark);
-    currentPlayer.space.push(7);
-    winnerCheck();
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if (!$(".row3 .column1 p").length) {
+      $(".row3 .column1").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.space.push(7);
+      winnerCheck();
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row3 .column2").click(function() {
-    $(".row3 .column2").text(currentPlayer.mark);
-    currentPlayer.space.push(8);
-    winnerCheck();
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if (!$(".row3 .column2 p").length) {
+      $(".row3 .column2").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.space.push(8);
+      winnerCheck();
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row3 .column3").click(function() {
-    $(".row3 .column3").text(currentPlayer.mark);
-    currentPlayer.space.push(9);
-    winnerCheck();
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if (!$(".row3 .column3 p").length) {
+      $(".row3 .column3").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.space.push(9);
+      winnerCheck();
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
 })

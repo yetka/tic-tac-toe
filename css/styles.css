@@ -1,0 +1,16 @@
+.winner, .board, body h3 {
+  display: none;
+}
+
+.col-md-4 {
+  border: 2px solid black;
+  background-color: lightgrey;
+}
+
+.row {
+  font-size: 100px;
+  text-align: center;
+  width: 500px;
+  height: 200px;
+  margin-left: 300px;
+}

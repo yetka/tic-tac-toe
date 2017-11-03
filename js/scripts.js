@@ -2,7 +2,7 @@ var player1;
 var player2;
 var currentPlayer;
 
-function Player (name, mark, space) {
+function Player (name, mark) {
   this.name = name;
   this.mark = mark;
   this.space = [];
@@ -16,14 +16,25 @@ var playerSwitch = function() {
   }
 }
 
-
+function checkCombination (combination, space) {
+  var total = 0;
+  for (var i=0;i<combination.length;i++) {
+    if (space.includes(combination[i])) {
+      total++;
+    }
+  }
+  if (total===combination.length) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 var winnerCheck = function() {
-  var winningCombinations = ["1,2,3","4,5,6","7,8,9","1,4,7","2,5,8","3,6,9","1,5,9","3,5,7"]
-  var numbers = currentPlayer.space.sort();
-  var numbersInString = numbers.toString();
+  var winningCombinations = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[3,5,7]]
+
   for (index=0;index<winningCombinations.length;index++) {
-    if (numbersInString.includes(winningCombinations[index])) {
+    if (checkCombination(winningCombinations[index],currentPlayer.space)) {
       alert("we have a winner");
     }
   }
